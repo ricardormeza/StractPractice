@@ -1,0 +1,136 @@
+:root{
+    --color-negro:#020101;
+    --color-gris: #dbd8d9;
+    --color-rosa1: #c72d4d;
+    --color-rosa2:#c7a2b7;
+    --color-rosa3: #E86192;
+    --color-cafe: #613b50;
+    --color-morado:#791390;
+}
+
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    background-color: var(--color-negro);
+}
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--main-bg-color);
+    margin-top: 5rem;
+    background-color: var(--color-gris);
+    height: 750px;
+    margin-bottom: 6rem;
+}
+h1,h2,h3{
+    font-family: sans-serif;
+    font-weight: 900;
+    color: var(--color-negro);
+    text-align: center;
+    margin: 0;
+    padding:0;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.6rem;
+}
+h3{
+    font-size: 3rem;
+}
+.contenedor{
+    display: grid;
+    
+    grid: 150px auto 25px 150px / repeat(6,1fr);
+    grid-template-areas:    "top top top . atop atop"
+                            "main main main void void void"
+                            ". . . void void void"
+                            "footer footer footer void void void";
+    column-gap: 1rem;
+    border-radius: 10px;
+}
+.top{
+    grid-area: top;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40%;
+    gap: 2rem;
+    margin-left: 2.5rem;
+    font-size: 2rem;
+}
+.top a{
+    text-decoration: none;
+    color: var(--color-negro);
+}
+.top a:hover{
+    color: var(--color-rosa1);
+}
+.atop{
+    grid-area: atop;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40%;
+    gap: 2rem;
+}
+.atop a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--color-negro);
+    padding: 10px;
+    background-color: var(--color-rosa3);
+}
+.atop a:last-child{
+    background-color: var(--color-negro);
+    color: var(--color-gris);
+}
+.atop a:hover{
+    color: var(--color-rosa1);
+}
+.void{
+    grid-area: void;
+    background-image: url(../img/lineas.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.seccion_1{
+    grid-area: main;
+    align-self: center;
+}
+.seccion_1 h1{
+    font-size: 6rem;
+}
+.seccion_1 p{
+    font-size: 2rem;
+    text-align: justify;
+    padding: 0 0 0 40px;
+    width: 80%;
+}
+.seccion_1 a{
+    padding: 0 0 0 40px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--color-negro);
+}
+.seccion_1 a:hover{
+    color: var(--color-rosa1);
+}
+.info{
+    display: flex;
+    align-self: center;
+}
+
+
+.seccion_2{
+    grid-area: footer;
+    
+}
